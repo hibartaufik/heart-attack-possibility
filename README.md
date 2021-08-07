@@ -1,4 +1,4 @@
-# Project 2: Machine Learning: Heart Attack Possibility
+# Project 3: Machine Learning - Heart Attack Possibility
 
 Overview:
 1. Membuat model Machine Learning dengan algoritma Decision Tree dengan bahasa Python
