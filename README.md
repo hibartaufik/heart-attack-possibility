@@ -18,14 +18,16 @@ Overview:
     - **'ca'** : number of major vessels (0-3) colored by flourosopy (jumlah nadi utama)
     - **'thal'** : thal: 0 = normal; 1 = fixed defect; 2 = reversable defect (normal, cacat tetap, cacat sementara)
     - **'target'** : target: 0= less chance of heart attack 1= more chance of heart attack
-4. Terdapat 7 tahapan dalam mengolah data dan membuat model, yaitu:
+4. Terdapat 6 tahapan dalam mengolah data dan membuat model, yaitu:
     - Import Libraries and Dataset
-    - Remove Duplicates
     - Exploratory Data Analysis
     - Feature Engineering
     - Modeling
     - Model Evaluation
     - Save Model
+    
+    Tahapan di atas bukan merupakan tahapan yang baku, tahapan dapat disesuaikan berdasarkan karakteristik data dan studi kasus
+    
 5. Project menggunakan dataset berasal kaggle, disusun oleh Naresh Bhat. Dapat diakses [disini](https://www.kaggle.com/nareshbhat/health-care-data-set-on-heart-attack-possibility)
 
 ## 1. Import Libraries dan Dataset
