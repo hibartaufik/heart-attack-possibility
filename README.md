@@ -21,7 +21,7 @@
     - **'thal'** : thal: 0 = normal; 1 = fixed defect; 2 = reversable defect (normal, cacat tetap, cacat sementara)
     - **'target'** : target: 0= less chance of heart attack 1= more chance of heart attack
 4. Terdapat 6 tahapan dalam mengolah data dan membuat model, yaitu:
-    - Import Libraries and Dataset
+    - Import Libraries & Dataset
     - Exploratory Data Analysis
     - Feature Engineering
     - Modeling
