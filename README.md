@@ -77,9 +77,12 @@ df.isnull().sum()
 df.shape
 ```
 ![image](https://user-images.githubusercontent.com/74480780/128596084-dfa02980-0c33-405e-8358-4144077d301e.png)
+
 ```
 df.loc[df.duplicated()]
 ```
+![image](https://user-images.githubusercontent.com/74480780/128597060-1231f0b0-bd6d-438c-9083-3b95c3f3aece.png)
+
 ```
 df = df.drop_duplicates(ignore_index=True)
 ```
@@ -299,14 +302,53 @@ print(classification_report(y_test, new_model.predict(X_test)))
 ![image](https://user-images.githubusercontent.com/74480780/128596623-53578e87-33ce-49b9-bf9f-a32dd3c51db6.png)
 
 ### 5.2 Confusion Matrix
+![](/images/cm_image.png)
+*image by: MLeeDataScience in Toward Data Science*
 
+- Membandingkan TRUE POSITIVE & TRUE NEGATIVE melalui Heatmap
+```
+mx_1 = confusion_matrix(y_test, model.predict(X_test))
+mx_2 = confusion_matrix(y_test, new_model.predict(X_test))
 
+fig, ax = plt.subplots(1, 2, figsize=(10, 3), dpi=200, sharey=True)
+ax = ax.flatten()
+sns.heatmap(mx_1, ax=ax[0], cmap='Blues', annot=True, linewidths=1)
+sns.heatmap(mx_2, ax=ax[1], cmap='Blues', annot=True, linewidths=1)
 
+plt.show()
+```
+![image](https://user-images.githubusercontent.com/74480780/128596893-e7833c3e-313b-4587-b1c6-b33edcd28425.png)
 
+- Presentase prediksi model pertama
+```
+print(f"True Positif\t:{round(mx_1[0][0] / (mx_1[0][0] + mx_1[0][1]) * 100, 3)}%")
+print(f"True Negatif\t:{round(mx_1[1][1] / (mx_1[1][1] + mx_1[1][0]) * 100, 3)}%")
+```
+![image](https://user-images.githubusercontent.com/74480780/128596923-0a5dc070-0a01-420a-8cd8-48a39bf246ed.png)
 
+- Presentase prediksi model kedua
+```
+print(f"True Positif\t:{round(mx_2[0][0] / (mx_2[0][0] + mx_2[0][1]) * 100, 3)}%")
+print(f"True Negatif\t:{round(mx_2[1][1] / (mx_2[1][1] + mx_2[1][0]) * 100, 3)}%")
+```
+![image](https://user-images.githubusercontent.com/74480780/128596940-e68091c9-b91c-4cd8-bb84-21b26518947f.png)
 
+## 6. Save Model
+```
+import pickle
+```
+```
+model_name = "heart.dt"
+pickle.dump(model, open(model_name, 'wb'))
+```
+```
+new_model_name = "new_heart.dt"
+pickle.dump(new_model, open(new_model_name, 'wb'))
+```
 
+## Referensi
 
-
-
-
+- Veratamala, Arinda. (2021). *Awas, Ini Akibatnya Jika Gula Darah Anda Terlalu Tinggi*. Diakses dari https://hellosehat.com/diabetes/akibat-gula-darah-tinggi/ pada 5 Agustus 2021.
+- American Heart Association editorial staff. (2021). *Understanding Blood Pressure Readings*. Diakses dari https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings pada 6 Agustus 2021.
+- American Heart Association editorial staff. (2021). *Target Heart Rates Chart*. Diaskes dari https://www.heart.org/en/healthy-living/fitness/fitness-basics/target-heart-rates pada 7 Agustus 2021.
+- MLeeDataScience. (2021). *Visual Guide to the Confusion Matrix*. Diakses dari https://towardsdatascience.com/visual-guide-to-the-confusion-matrix-bb63730c8eba pada 7 Agustus 2021.
