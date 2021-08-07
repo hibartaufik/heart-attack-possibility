@@ -2,7 +2,7 @@
 
 Overview:
 1. Membuat model Machine Learning dengan algoritma Decision Tree dengan bahasa Python
-2. Dataset berasal dari kaggle.com dengan nama 'Health care: Heart attack possibility Dataset' yang disusun oleh Naresh Bhat yang mengambil data dari [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)
+2. Dataset berasal dari kaggle.com dengan nama 'Health care: Heart attack possibility Dataset', disusun oleh Naresh Bhat yang mengambil data dari [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)
 3. Dataset memiliki 14 kolom
     - **'age'** : age (umur)
     - **'sex'** : sex (jenis kelamin)
@@ -18,7 +18,6 @@ Overview:
     - **'ca'** : number of major vessels (0-3) colored by flourosopy (jumlah nadi utama)
     - **'thal'** : thal: 0 = normal; 1 = fixed defect; 2 = reversable defect (normal, cacat tetap, cacat sementara)
     - **'target'** : target: 0= less chance of heart attack 1= more chance of heart attack
-
 4. Terdapat 7 tahapan dalam mengolah data dan membuat model, yaitu:
     - Import Libraries and Dataset
     - Remove Duplicates
