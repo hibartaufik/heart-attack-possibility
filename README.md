@@ -1,7 +1,8 @@
 # Project 3: Machine Learning - Heart Attack Possibility
 ![](/images/tim-marshall-cAtzHUz7Z8g-unsplash.jpg)
 *image by: Tim Marshall on Unsplash*
-Overview:
+
+## Overview
 1. Membuat model Machine Learning dengan algoritma Decision Tree dengan bahasa Python
 2. Dataset berasal dari kaggle.com dengan nama 'Health care: Heart attack possibility Dataset', disusun oleh Naresh Bhat yang mengambil data dari [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)
 3. Dataset memiliki 14 kolom
